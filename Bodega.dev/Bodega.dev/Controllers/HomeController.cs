@@ -28,7 +28,7 @@ namespace Bodega.dev.Controllers
         }
         public ActionResult Menu()
         {
-            ViewBag.Message = "Your Menu page.";
+            ViewBag.Message = "Meny";
 
             return View();
         }
