@@ -20,7 +20,7 @@ namespace Bodega.dev.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Gallery()
         {
             ViewBag.Message = "Kontakt";
 
