@@ -15,14 +15,20 @@ namespace Bodega.dev.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Välkommen";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Kontakt";
+
+            return View();
+        }
+        public ActionResult Menu()
+        {
+            ViewBag.Message = "Your Menu page.";
 
             return View();
         }
