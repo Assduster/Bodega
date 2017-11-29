@@ -22,3 +22,7 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.container .jumbotron {
+margin:0 0 0 0;
+}
