@@ -7,5 +7,6 @@ namespace Bodega.dev.Models
 {
     public class News
     {
+
     }
 }
