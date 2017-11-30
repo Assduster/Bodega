@@ -1,6 +1,6 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -70,17 +70,19 @@ textarea {
 .gallery_product {
     margin-bottom: 30px;
 }
-.container .jumbotron {
-    margin-left: -400px;
+.img-responsive {
+    width:350px;
+    height:350px;
+}
+.jumbotron {
     display: block;
     width: 200%;
-    height: 250px;
+    height: 225px;
+    margin-top:-50px;
     background-image: url(https://i.imgur.com/w3pZyOp.jpg);
-}
-.container .mid {
-    margin-top: -30px;
-    margin-left: -400px;
-    width: 200%;
-    height: 50px;
-    background: #333333;
+} 
+.navbar-inverse {
+    height:300%;
+    margin-top:-30px;
+
 }
