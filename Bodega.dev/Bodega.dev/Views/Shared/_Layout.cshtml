@@ -6,45 +6,69 @@
     <title>Bodega</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    
+
 </head>
 <body>
-    
-    <div class="jumbotron"></div>
-    <div class="navbar navbar-inverse">
-        <div class="container">
 
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Bodega", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Meny", "Menu", "Home")</li>
-                    <li>@Html.ActionLink("Om", "About", "Home")</li>
-                    <li>@Html.ActionLink("Galleri", "Gallery", "Home")</li>
-                    <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
+    <div class="jumbotron"></div>
+    @if (User.Identity.Name == "Admin")
+    {
+        <div class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Bodega", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a class="navigation" href="#home">Home</a></li>
+                        <li><a class="navigation" href="#Gallery">Gallery</a></li>
+                        <li><a class="navigation" href="#Contact">Kontakt</a></li>
+                        <li><a class="navigation" href="#Contact">Admin</a></li>
+
+                    </ul>
+                </div>
+
             </div>
         </div>
-    </div>
+    }
+    else
+    {
+        <div class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Bodega", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a class="navigation" href="#home">Home</a></li>
+                        <li><a class="navigation" href="#Gallery">Gallery</a></li>
+                        <li><a class="navigation" href="#Contact">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    }
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+        @*<hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>*@
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     <script src="~/Scripts/script.js"></script>
-    <script src="~/Scripts/gallery.js"></script>
 
     @RenderSection("scripts", required: false)
 </body>

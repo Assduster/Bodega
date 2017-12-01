@@ -206,6 +206,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712011156037_Initial.cs" />
+    <Compile Include="Migrations\201712011156037_Initial.Designer.cs">
+      <DependentUpon>201712011156037_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712011157138_Initial1.cs" />
+    <Compile Include="Migrations\201712011157138_Initial1.Designer.cs">
+      <DependentUpon>201712011157138_Initial1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -216,6 +225,39 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\imgr\101.jpg" />
+    <Content Include="Content\imgr\102.jpg" />
+    <Content Include="Content\imgr\103.jpg" />
+    <Content Include="Content\imgr\104.jpg" />
+    <Content Include="Content\imgr\105.jpg" />
+    <Content Include="Content\imgr\106.jpg" />
+    <Content Include="Content\imgr\108.jpg" />
+    <Content Include="Content\imgr\109.jpg" />
+    <Content Include="Content\imgr\110.jpg" />
+    <Content Include="Content\imgr\111.jpg" />
+    <Content Include="Content\imgr\112.jpg" />
+    <Content Include="Content\imgr\114.jpg" />
+    <Content Include="Content\imgr\115.jpg" />
+    <Content Include="Content\imgr\116.jpg" />
+    <Content Include="Content\imgr\118.jpg" />
+    <Content Include="Content\imgr\119.jpg" />
+    <Content Include="Content\imgr\120.jpg" />
+    <Content Include="Content\imgr\121.jpg" />
+    <Content Include="Content\imgr\122.jpg" />
+    <Content Include="Content\imgr\123.jpg" />
+    <Content Include="Content\imgr\124.jpg" />
+    <Content Include="Content\imgr\125.jpg" />
+    <Content Include="Content\imgr\126.jpg" />
+    <Content Include="Content\imgr\127.jpg" />
+    <Content Include="Content\imgr\128.jpg" />
+    <Content Include="Content\imgr\129.jpg" />
+    <Content Include="Content\imgr\130.jpg" />
+    <Content Include="Content\imgr\131.jpg" />
+    <Content Include="Content\imgr\132.jpg" />
+    <Content Include="Content\imgr\133.jpg" />
+    <Content Include="Content\imgr\134.jpg" />
+    <Content Include="Content\imgr\135.jpg" />
+    <Content Include="Content\imgr\136.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -249,8 +291,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -272,12 +312,9 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\Menu.cshtml" />
-    <Content Include="Views\Home\Gallery.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\imgr\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -291,6 +328,14 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201712011156037_Initial.resx">
+      <DependentUpon>201712011156037_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712011157138_Initial1.resx">
+      <DependentUpon>201712011157138_Initial1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

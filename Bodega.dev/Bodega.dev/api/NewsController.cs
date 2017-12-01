@@ -20,9 +20,7 @@ namespace Bodega.dev.api
         // GET: api/News
         public IHttpActionResult Getnews()
         {
-            var userid = User.Identity.GetUserName();
             var news = db.news
-                .Include(x => userid)
                 .ToList();
             return Ok(news);
         }

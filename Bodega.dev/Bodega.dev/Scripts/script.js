@@ -1,30 +1,41 @@
 ﻿$(document).ready(function () {
-    console.log("Galery sidan körs");
-});
-$("#showInformationtext1").hide();
-$("#showInformationtext2").hide();
-$("#showInformationtext3").hide();
-$("#showInformationtext4").hide();
-$("#showInformationtext5").hide();
-$("#showInformationtext6").hide();
+    console.log("Home Page is Loading guyssss! :D");
+    hidePages();
+    function hidePages() {
+        $("#GalleryPage").hide();
+        $("#ContactPage").hide();
+        $("#HomePage").hide();
+    }
+    $("#HomePage").show();
 
-$("#bild1").click(function () {
-    $("#imagediv2").fadeToggle();
-    $("#showInformationtext1").fadeToggle();
-    $("#bild2").fadeToggle();
-    $("#bild3").fadeToggle();
-});
-$("#bild2").click(function () {
-    $("#imagediv2").fadeToggle();
-    $("#showInformationtext2").fadeToggle();
-    $("#bild1").fadeToggle();
-    $("#bild3").fadeToggle();
-});
-$("#bild3").click(function () {
-    $("#imagediv2").fadeToggle();
-    $("#showInformationtext3").fadeToggle();
-    $("#bild2").fadeToggle();
-    $("#bild1").fadeToggle();
+    $(".navigation").click(function () {
+        var navDestination = this.href.substr(this.href.indexOf("#") + 1);
+        hidePages();
+        switch (navDestination) {
+            case "home":
+                $("#HomePage").show();
+                break;
+            case "Gallery":
+                console.log("GalleryPage");
+                $("#GalleryPage").show();
+                getNewsDataApi();
+                break;
+            case "Contact":
+                console.log("ContactPage");
+                $("#ContactPage").show();
+                break;
+        };
+    });
+
+    function getNewsDataApi() {
+        $.get("api/news").then(function (data) {
+            console.log(data);
+        });
+    }
+
+    
+
+
+
 });
 
- 
