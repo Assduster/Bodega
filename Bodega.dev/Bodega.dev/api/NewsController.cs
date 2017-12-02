@@ -9,7 +9,6 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using Bodega.dev.Models;
-using Microsoft.AspNet.Identity;
 
 namespace Bodega.dev.api
 {
@@ -47,7 +46,7 @@ namespace Bodega.dev.api
                 return BadRequest(ModelState);
             }
 
-            if (id != news.id)
+            if (id != news.Id)
             {
                 return BadRequest();
             }
@@ -85,7 +84,7 @@ namespace Bodega.dev.api
             db.news.Add(news);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = news.id }, news);
+            return CreatedAtRoute("DefaultApi", new { id = news.Id }, news);
         }
 
         // DELETE: api/News/5
@@ -115,7 +114,7 @@ namespace Bodega.dev.api
 
         private bool NewsExists(int id)
         {
-            return db.news.Count(e => e.id == id) > 0;
+            return db.news.Count(e => e.Id == id) > 0;
         }
     }
 }

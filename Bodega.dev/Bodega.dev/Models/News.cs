@@ -7,9 +7,9 @@ namespace Bodega.dev.Models
 {
     public class News
     {
-        public int id { get; set; }
-        public string title { get; set; }
-        public string text { get; set; }
-        public DateTime published { get; set; }
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Text { get; set; }
+        public DateTime Published { get; set; }
     }
 }

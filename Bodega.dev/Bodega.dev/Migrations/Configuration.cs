@@ -15,15 +15,15 @@ namespace Bodega.dev.Migrations
 
         protected override void Seed(Bodega.dev.Models.ApplicationDbContext context)
         {
-            context.news.AddOrUpdate(x => x.id,
-                new News() { id = 1, title = "LOREM IMPUSM LOREM UMPS", text = "LOREM IMPUSM LOREM UMPS", published = DateTime.Now },
-                new News() { id = 2, title = "LOREM IMPUSM LOREM UMPS", text = "LOREM IMPUSM LOREM UMPS", published = DateTime.Now },
-                new News() { id = 3, title = "LOREM IMPUSM LOREM UMPS", text = "LOREM IMPUSM LOREM UMPS", published = DateTime.Now },
-                new News() { id = 4, title = "LOREM IMPUSM LOREM UMPS", text = "LOREM IMPUSM LOREM UMPS", published = DateTime.Now },
-                new News() { id = 5, title = "LOREM IMPUSM LOREM UMPS", text = "LOREM IMPUSM LOREM UMPS", published = DateTime.Now },
-                new News() { id = 6, title = "LOREM IMPUSM LOREM UMPS", text = "LOREM IMPUSM LOREM UMPS", published = DateTime.Now },
-                new News() { id = 7, title = "LOREM IMPUSM LOREM UMPS", text = "LOREM IMPUSM LOREM UMPS", published = DateTime.Now },
-                new News() { id = 8, title = "LOREM IMPUSM LOREM UMPS", text = "LOREM IMPUSM LOREM UMPS", published = DateTime.Now }
+            context.news.AddOrUpdate(x => x.Id,
+            new News() { Id = 1, Title = "LOREM IMPUSM LOREM UMPS", Text = "LOREM IMPUSM LOREM UMPS", Published = DateTime.Now },
+            new News() { Id = 2, Title = "LOREM IMPUSM LOREM UMPS", Text = "LOREM IMPUSM LOREM UMPS", Published = DateTime.Now },
+            new News() { Id = 3, Title = "LOREM IMPUSM LOREM UMPS", Text = "LOREM IMPUSM LOREM UMPS", Published = DateTime.Now },
+            new News() { Id = 4, Title = "LOREM IMPUSM LOREM UMPS", Text = "LOREM IMPUSM LOREM UMPS", Published = DateTime.Now },
+            new News() { Id = 5, Title = "LOREM IMPUSM LOREM UMPS", Text = "LOREM IMPUSM LOREM UMPS", Published = DateTime.Now },
+            new News() { Id = 6, Title = "LOREM IMPUSM LOREM UMPS", Text = "LOREM IMPUSM LOREM UMPS", Published = DateTime.Now },
+            new News() { Id = 7, Title = "LOREM IMPUSM LOREM UMPS", Text = "LOREM IMPUSM LOREM UMPS", Published = DateTime.Now },
+            new News() { Id = 8, Title = "LOREM IMPUSM LOREM UMPS", Text = "LOREM IMPUSM LOREM UMPS", Published = DateTime.Now }
 
                 );
 
