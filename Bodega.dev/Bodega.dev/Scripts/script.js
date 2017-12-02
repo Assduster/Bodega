@@ -8,6 +8,7 @@
         $("#GalleryPage").hide();
         $("#ContactPage").hide();
         $("#HomePage").hide();
+        $("#MenyPage").hide();
        
     }
 
@@ -20,10 +21,11 @@
         var navDestination = this.href.substr(this.href.indexOf("#") + 1);
         hidePages();
         switch (navDestination) {
-            case "home":
+            case "Home":
                 $("#HomePage").show();
                 getnewsdataapi();
                 break;
+
             case "Gallery":
                 console.log("GalleryPage");
                 $("#GalleryPage").show();
@@ -32,6 +34,10 @@
             case "Contact":
                 console.log("ContactPage");
                 $("#ContactPage").show();
+                break;
+            case "Meny":
+                console.log("MenyPage");
+                $("#MenyPage").show();
                 break;
         };
     });
