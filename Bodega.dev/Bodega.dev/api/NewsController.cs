@@ -19,6 +19,8 @@ namespace Bodega.dev.api
         // GET: api/News
         public IHttpActionResult Getnews()
         {
+            
+
             var news = db.news
                 .ToList();
             return Ok(news);
@@ -80,6 +82,8 @@ namespace Bodega.dev.api
             {
                 return BadRequest(ModelState);
             }
+
+            news.Published = DateTime.Now;
 
             db.news.Add(news);
             db.SaveChanges();

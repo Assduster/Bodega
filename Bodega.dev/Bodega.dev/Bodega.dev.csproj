@@ -218,6 +218,10 @@
     <Compile Include="Migrations\201712021434191_InitialUpdateNewsClass.Designer.cs">
       <DependentUpon>201712021434191_InitialUpdateNewsClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712021657585_Jobs.cs" />
+    <Compile Include="Migrations\201712021657585_Jobs.Designer.cs">
+      <DependentUpon>201712021657585_Jobs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -342,6 +346,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712021434191_InitialUpdateNewsClass.resx">
       <DependentUpon>201712021434191_InitialUpdateNewsClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712021657585_Jobs.resx">
+      <DependentUpon>201712021657585_Jobs.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
