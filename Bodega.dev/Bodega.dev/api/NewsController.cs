@@ -19,7 +19,6 @@ namespace Bodega.dev.api
         // GET: api/News
         public IHttpActionResult Getnews()
         {
-            
 
             var news = db.news
                 .ToList();

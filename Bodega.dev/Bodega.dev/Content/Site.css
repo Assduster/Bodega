@@ -79,8 +79,8 @@ textarea {
     display: block;
     width: 200%;
     height: 225px;
-    margin-top:-50px;
-    background-image: url(/Content/imgr/);
+    margin-top: -50px;
+    background-image: url(/Content/imgr/Background.jpg);
 } 
 .navbar-inverse {
     height:300%;
