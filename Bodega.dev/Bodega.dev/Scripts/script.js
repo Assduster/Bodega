@@ -23,21 +23,24 @@
         switch (navDestination) {
             case "Home":
                 $("#HomePage").show();
+                $("#HomepageTitle").show();
                 getnewsdataapi();
                 break;
 
             case "Gallery":
                 console.log("GalleryPage");
                 $("#GalleryPage").show();
-                
+                $("#HomepageTitle").hide();
                 break;
             case "Contact":
                 console.log("ContactPage");
                 $("#ContactPage").show();
+                $("#HomepageTitle").hide();
                 break;
             case "Meny":
                 console.log("MenyPage");
                 $("#MenyPage").show();
+                $("#HomepageTitle").hide();
                 break;
         };
     });
@@ -49,12 +52,19 @@
             $("#HomePage").empty();
 
             for (var i = 0; i < data.length; i++) {
-                var html = "<div class='well'><div class='media'><a class='pull-left' href='#'><img class='media- object' src='#'></a><div class='media-body'><h3 class='media- heading' style='font-family:Fjord One, serif; font-weight:bold;'>" + data[i].Title + "</h3><p class='text- right' style='font-family:Fjord One, serif; font-size:17px; font-weight:500;'>" + data[i].Text + "</p><ul class='list-inline list-unstyled'><li><span><i class='glyphicon glyphicon-calendar'></i>" + data[i].Published + "</span></li></ul></div></div></div>";
+                var html = "<div class='well'><div class='media'><a class='pull-left' href='#'><img class='media-object' src='/Content/imgr/101.jpg' style='width:250px; height:200px;'></a><div class='media-body'><h3 class='media-heading' style='font-family:Fjord One, serif; font-weight:bold;'>"
+                    + data[i].Title + "</h3><p class='text- right' style='font-family:Fjord One, serif; font-size:17px; font-weight:500;'>"
+                    + data[i].Text + "</p><ul class='list-inline list-unstyled'><li><span><i class='glyphicon glyphicon-calendar' ></i>"
+                    + data[i].Published + "</span></li></ul></div></div></div>";
             $("#HomePage").append(html);
              
             }
         });
     }
+
+    
+
+   
 
     panelsButton.click(function () {
         //get data-for attribute
