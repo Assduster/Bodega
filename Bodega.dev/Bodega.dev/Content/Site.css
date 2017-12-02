@@ -1,5 +1,5 @@
 ﻿body {
-    margin-top:20px;
+
     padding-top: 0px;
     padding-bottom: 0px;
 }
@@ -78,8 +78,8 @@ textarea {
 }
 .jumbotron {
     display: block;
-    width: 200%;
-    height: 225px;
+    padding-bottom: 0px;
+    height: 250px;
     margin-top: -50px;
     background-image: url(/Content/imgr/Backgroundjpg1.jpg);
 } 
@@ -207,7 +207,7 @@ h5 {
 
 
 .modal-body:not(.two-col) {
-    padding: 0px
+    padding: 0px;
 }
 
 .glyphicon {
