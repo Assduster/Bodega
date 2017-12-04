@@ -43,6 +43,8 @@
         };
     });
 
+    
+
     //Döljer alla sidor.
     function hidePages() {
         $("#GalleryPage").hide();
@@ -53,6 +55,8 @@
 
 
     }
+
+ 
 
     //Hämtar data från databasen och skriver ut det i HTML.
     function getnewsdataapi() {
