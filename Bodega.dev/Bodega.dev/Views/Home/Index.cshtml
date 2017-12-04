@@ -1,20 +1,19 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<link href="https://fonts.googleapis.com/css?family=Fjord+One" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+<h2 id="TitleOverAll" style="font-family:Fjord One, serif;" align="center">Nyheter <hr /></h2>
 
 <!--Home Page-->
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" />
-<hr />
-<h2 id="HomepageTitle" style="font-family:Fjord One, serif;" align="center">Nyheter<hr /></h2>
 <div class="container" id="HomePage">
+   
 </div>
+<!--End Home Page-->
 
-<!-------------------------------->
+
+
 <!--Gallery Page-->
 <div class="container" id="GalleryPage">
-    <h2 align="center" style="font-family:Fjord One, serif;">Galleri</h2>
     <hr />
     <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
         <div class="card card-inverse card-info"><img class="card-img-top" src="~/Content/imgr/101.jpg" style="height:250px; border:10px;"></div>
@@ -81,17 +80,42 @@
     </div>
 
 </div>
-<!-------------------------------->
+<!--End Gallery Page-->
+
 
 <!--Meny-->
 <div class="container" id="MenyPage">
-    </hr>
+    <hr />
     <img src="~/Content/imgr/MenyAllt.jpg" />
 </div>
+<!--End Menybar-->
 
-<!-------------------------------->
+
+<!--Add News Page-->
+<div class="container" id="addnewspage">
+    <hr />
+    <form>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" aria-describedby="title" placeholder="Title...">
+        </div>
+       <div class="form-group">
+    <label for="exampleFormControlTextarea1">Example textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+  </div>
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Ladda upp en bild/bilder</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+    </form>
+</div>
+<!--End Add News Page-->
+
+
+
 <!--Contact Page-->
 <div class="container">
+    <hr />
     <div class="row">
         <br /><br /><br />
         <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="contactLabel">
@@ -137,4 +161,4 @@
         </div>
     </div>
 </div>
-<!-------------------------------->
+<!--End Contact Page-->
