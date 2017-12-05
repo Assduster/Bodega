@@ -50,6 +50,7 @@
                 $("#MenyPage").show();
                 $("#addnewspage").hide();
                 $("#TitleOverAll").text('Meny');
+
                 break;
         };
     });
@@ -86,25 +87,21 @@
             }
         });
     }
-    
-    //Postar iväg en ny nyhet och sparar den i databasen.
-    $("#ost").click(function () {
-        addnews();
-    });
-    function addnews() {
-        var data = {
-            id: 0,
-            title: null,
-            text: null
-            
-        };
-        data.title = $("#postTitle").val();
-        data.text = $("#postText").val();
 
+    //Postar iväg en ny nyhet och sparar den i databasen.
+    var data = {
+        id: null,
+        title: null,
+        text: null
+    };
+
+    data.title = $("").val();
+    data.text = $("").val();
+
+    function addnews(data) {
         $.post("api/news", data).then(function (data) {
-            console.log("Nyhet skapad!");
+            console.log("Data skapad");
         });
-      
     }
 
 
