@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using Bodega.dev.Models;
+using System.Globalization;
 
 namespace Bodega.dev.api
 {
@@ -83,7 +84,7 @@ namespace Bodega.dev.api
             }
 
             news.Published = DateTime.Now;
-
+            
             db.news.Add(news);
             db.SaveChanges();
 
