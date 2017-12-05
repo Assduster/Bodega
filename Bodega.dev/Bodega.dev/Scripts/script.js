@@ -9,7 +9,7 @@
         $("#ContactPage").hide();
         $("#HomePage").hide();
         $("#MenyPage").hide();
-       
+        $("#AddnewsPage").hide();
     }
 
     var panels = $('.vote-results');
@@ -35,6 +35,11 @@
             case "Contact":
                 console.log("ContactPage");
                 $("#ContactPage").show();
+                $("#HomepageTitle").hide();
+                break;
+            case "AddNews":
+                console.log("AddNews");
+                $("#AddnewsPage").show();
                 $("#HomepageTitle").hide();
                 break;
             case "Meny":
@@ -83,5 +88,7 @@
             }
         })
     });
+
+  
 });
 
