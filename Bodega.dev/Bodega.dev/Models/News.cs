@@ -20,9 +20,6 @@ namespace Bodega.dev.Models
     }
     public class FileUpload
     {
-       
-       
-        [Key]
         public int Id{get;set;}
         public string imagename {get;set;}
         public byte[] imagedata{get; set;
