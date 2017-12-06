@@ -193,6 +193,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="api\FileUploadsController.cs" />
     <Compile Include="api\NewsController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -206,21 +207,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201712011156037_Initial.cs" />
-    <Compile Include="Migrations\201712011156037_Initial.Designer.cs">
-      <DependentUpon>201712011156037_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712011157138_Initial1.cs" />
-    <Compile Include="Migrations\201712011157138_Initial1.Designer.cs">
-      <DependentUpon>201712011157138_Initial1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712021434191_InitialUpdateNewsClass.cs" />
-    <Compile Include="Migrations\201712021434191_InitialUpdateNewsClass.Designer.cs">
-      <DependentUpon>201712021434191_InitialUpdateNewsClass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712021657585_Jobs.cs" />
-    <Compile Include="Migrations\201712021657585_Jobs.Designer.cs">
-      <DependentUpon>201712021657585_Jobs.cs</DependentUpon>
+    <Compile Include="Migrations\201712052117592_Intial.cs" />
+    <Compile Include="Migrations\201712052117592_Intial.Designer.cs">
+      <DependentUpon>201712052117592_Intial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -338,17 +327,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712011156037_Initial.resx">
-      <DependentUpon>201712011156037_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712011157138_Initial1.resx">
-      <DependentUpon>201712011157138_Initial1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712021434191_InitialUpdateNewsClass.resx">
-      <DependentUpon>201712021434191_InitialUpdateNewsClass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712021657585_Jobs.resx">
-      <DependentUpon>201712021657585_Jobs.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712052117592_Intial.resx">
+      <DependentUpon>201712052117592_Intial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
