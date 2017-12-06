@@ -11,7 +11,6 @@ using System.Web.Http.Description;
 using Bodega.dev.Models;
 using System.Web;
 using System.IO;
-using System.Drawing;
 
 namespace Bodega.dev.api
 {
@@ -22,9 +21,9 @@ namespace Bodega.dev.api
         // GET: api/News
         public IHttpActionResult Getnews()
         {
+            
             var news = db.news
-                .OrderByDescending(x => x.Published)
-                .Include(x=> x.Image)
+                .OrderByDescending(x => x.Published).Include(x=> x.Image)
                 .ToList();
             return Ok(news);
         }
@@ -112,8 +111,10 @@ namespace Bodega.dev.api
             {
                 return BadRequest(ModelState);
             }
-
+            var img = db.news.FirstOrDefault(x => x.ImageId == x.ImageId);
             news.Published = DateTime.Now;
+            news.Image.Id = img.Id;
+            
             db.news.Add(news);
             db.SaveChanges();
 

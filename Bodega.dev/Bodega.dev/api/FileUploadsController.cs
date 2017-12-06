@@ -17,10 +17,9 @@ namespace Bodega.dev.api
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/FileUploads
-        public IHttpActionResult GetFileUploads()
+        public IQueryable<FileUpload> GetFileUploads()
         {
-            var latestfiles = db.FileUploads.Take(1);
-            return Ok(latestfiles);
+            return db.FileUploads;
         }
 
         // GET: api/FileUploads/5
