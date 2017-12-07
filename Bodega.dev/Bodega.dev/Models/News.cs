@@ -12,6 +12,7 @@ namespace Bodega.dev.Models
         public string Text { get; set; }
         public DateTime Published { get; set; }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         public FileUpload Image { get; set; }
         public int ImageId { get; set; }
@@ -28,5 +29,7 @@ namespace Bodega.dev.Models
         public byte[] imagedata{get; set;
         } 
 >>>>>>> parent of 27c373d... ww
+=======
+>>>>>>> parent of ddb9a3e... GG
     }
 }

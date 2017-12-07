@@ -11,12 +11,15 @@ using System.Web.Http.Description;
 using Bodega.dev.Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 using System.Web;
 using System.IO;
 >>>>>>> parent of 27c373d... ww
 =======
 >>>>>>> parent of 3da7a65... work
+=======
+>>>>>>> parent of ddb9a3e... GG
 
 namespace Bodega.dev.api
 {
@@ -28,6 +31,7 @@ namespace Bodega.dev.api
         public IHttpActionResult Getnews()
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             var news = db.news
 =======
@@ -35,6 +39,10 @@ namespace Bodega.dev.api
             var news = db.news
                 .OrderByDescending(x => x.Published).Include(x=> x.Image)
 >>>>>>> parent of 27c373d... ww
+=======
+
+            var news = db.news
+>>>>>>> parent of ddb9a3e... GG
                 .ToList();
             return Ok(news);
         }
@@ -95,8 +103,9 @@ namespace Bodega.dev.api
             {
                 return BadRequest(ModelState);
             }
-            var img = db.news.FirstOrDefault(x => x.ImageId == x.ImageId);
+
             news.Published = DateTime.Now;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -107,6 +116,9 @@ namespace Bodega.dev.api
 =======
 
 >>>>>>> parent of 3da7a65... work
+=======
+
+>>>>>>> parent of ddb9a3e... GG
             db.news.Add(news);
             db.SaveChanges();
 

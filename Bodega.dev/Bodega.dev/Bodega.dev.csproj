@@ -207,6 +207,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of ddb9a3e... GG
     <Compile Include="Migrations\201712011156037_Initial.cs" />
     <Compile Include="Migrations\201712011156037_Initial.Designer.cs">
       <DependentUpon>201712011156037_Initial.cs</DependentUpon>
@@ -222,11 +225,14 @@
     <Compile Include="Migrations\201712021657585_Jobs.cs" />
     <Compile Include="Migrations\201712021657585_Jobs.Designer.cs">
       <DependentUpon>201712021657585_Jobs.cs</DependentUpon>
+<<<<<<< HEAD
 =======
     <Compile Include="Migrations\201712052117592_Intial.cs" />
     <Compile Include="Migrations\201712052117592_Intial.Designer.cs">
       <DependentUpon>201712052117592_Intial.cs</DependentUpon>
 >>>>>>> parent of 27c373d... ww
+=======
+>>>>>>> parent of ddb9a3e... GG
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -345,6 +351,9 @@
   </ItemGroup>
   <ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of ddb9a3e... GG
     <EmbeddedResource Include="Migrations\201712011156037_Initial.resx">
       <DependentUpon>201712011156037_Initial.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,10 +365,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712021657585_Jobs.resx">
       <DependentUpon>201712021657585_Jobs.cs</DependentUpon>
+<<<<<<< HEAD
 =======
     <EmbeddedResource Include="Migrations\201712052117592_Intial.resx">
       <DependentUpon>201712052117592_Intial.cs</DependentUpon>
 >>>>>>> parent of 27c373d... ww
+=======
+>>>>>>> parent of ddb9a3e... GG
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
