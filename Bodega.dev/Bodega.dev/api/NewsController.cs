@@ -10,10 +10,13 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using Bodega.dev.Models;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 using System.Web;
 using System.IO;
 >>>>>>> parent of 27c373d... ww
+=======
+>>>>>>> parent of 3da7a65... work
 
 namespace Bodega.dev.api
 {
@@ -95,11 +98,15 @@ namespace Bodega.dev.api
             var img = db.news.FirstOrDefault(x => x.ImageId == x.ImageId);
             news.Published = DateTime.Now;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             news.Image.Id = img.Id;
             
 >>>>>>> parent of 27c373d... ww
+=======
+
+>>>>>>> parent of 3da7a65... work
             db.news.Add(news);
             db.SaveChanges();
 

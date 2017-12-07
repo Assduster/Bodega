@@ -122,12 +122,15 @@
     function addnews(data) {
         $.post("api/news", data).then(function (data) {
             console.log("Data skapad");
+<<<<<<< HEAD
 =======
                 
             }
             
          
 >>>>>>> parent of 27c373d... ww
+=======
+>>>>>>> parent of 3da7a65... work
         });
     }
   
