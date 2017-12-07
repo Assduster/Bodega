@@ -3,20 +3,10 @@ namespace Bodega.dev.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Intial : DbMigration
+    public partial class Initial : DbMigration
     {
         public override void Up()
         {
-            CreateTable(
-                "dbo.FileUploads",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        imagename = c.String(),
-                        imagedata = c.Binary(),
-                    })
-                .PrimaryKey(t => t.Id);
-            
             CreateTable(
                 "dbo.News",
                 c => new
@@ -25,11 +15,8 @@ namespace Bodega.dev.Migrations
                         Title = c.String(),
                         Text = c.String(),
                         Published = c.DateTime(nullable: false),
-                        ImageId = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.FileUploads", t => t.ImageId, cascadeDelete: true)
-                .Index(t => t.ImageId);
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.AspNetRoles",
@@ -107,21 +94,18 @@ namespace Bodega.dev.Migrations
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
-            DropForeignKey("dbo.News", "ImageId", "dbo.FileUploads");
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
-            DropIndex("dbo.News", new[] { "ImageId" });
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
             DropTable("dbo.News");
-            DropTable("dbo.FileUploads");
         }
     }
 }
