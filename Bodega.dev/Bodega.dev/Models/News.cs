@@ -14,6 +14,7 @@ namespace Bodega.dev.Models
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         public FileUpload Image { get; set; }
         public int ImageId { get; set; }
@@ -30,6 +31,8 @@ namespace Bodega.dev.Models
         public byte[] imagedata{get; set;
         } 
 >>>>>>> parent of 27c373d... ww
+=======
+>>>>>>> parent of ddb9a3e... GG
 =======
 >>>>>>> parent of ddb9a3e... GG
 =======
