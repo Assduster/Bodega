@@ -9,8 +9,6 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using Bodega.dev.Models;
-using System.Web;
-using System.IO;
 
 namespace Bodega.dev.api
 {
@@ -21,38 +19,10 @@ namespace Bodega.dev.api
         // GET: api/News
         public IHttpActionResult Getnews()
         {
-            
+
             var news = db.news
-                .OrderByDescending(x => x.Published).Include(x=> x.Image)
                 .ToList();
             return Ok(news);
-        }
-
-        [HttpPost]
-        [Route("api/fileUpload")]
-        public IHttpActionResult PostFileUpload()
-        {
-            if (HttpContext.Current.Request.Files.AllKeys.Any())
-            {
-                // Get the uploaded image from the Files collection  
-                var httpPostedFile = HttpContext.Current.Request.Files["UploadedImage"];
-                if (httpPostedFile != null)
-                {
-                    FileUpload imgupload = new FileUpload();
-                    int length = httpPostedFile.ContentLength;
-                    imgupload.imagedata = new byte[length]; //get imagedata  
-                    httpPostedFile.InputStream.Read(imgupload.imagedata, 0, length);
-                    imgupload.imagename = Path.GetFileName(httpPostedFile.FileName);
-                    db.FileUploads.Add(imgupload);
-                    db.SaveChanges();
-                    var fileSavePath = Path.Combine(HttpContext.Current.Server.MapPath("~/Content/imgr"), httpPostedFile.FileName);
-                    // Save the uploaded file to "UploadedFiles" folder  
-                    httpPostedFile.SaveAs(fileSavePath);
-                    return Ok("Image Uploaded");
-                    
-                }
-            }
-            return Ok("Image is not Uploaded");
         }
 
         // GET: api/News/5
@@ -111,14 +81,13 @@ namespace Bodega.dev.api
             {
                 return BadRequest(ModelState);
             }
-            var img = db.news.FirstOrDefault(x => x.ImageId == x.ImageId);
+
             news.Published = DateTime.Now;
-            news.Image.Id = img.Id;
-            
+
             db.news.Add(news);
             db.SaveChanges();
 
-            return Ok();
+            return CreatedAtRoute("DefaultApi", new { id = news.Id }, news);
         }
 
         // DELETE: api/News/5

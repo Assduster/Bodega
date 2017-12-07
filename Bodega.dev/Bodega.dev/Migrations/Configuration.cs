@@ -1,5 +1,6 @@
 namespace Bodega.dev.Migrations
 {
+    using Bodega.dev.Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -14,18 +15,18 @@ namespace Bodega.dev.Migrations
 
         protected override void Seed(Bodega.dev.Models.ApplicationDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            context.news.AddOrUpdate(x => x.Id,
+            new News() { Id = 1, Title = "LOREM IMPUSM LOREM UMPS", Text = "LOREM IMPUSM LOREM UMPS", Published = DateTime.Now },
+            new News() { Id = 2, Title = "LOREM IMPUSM LOREM UMPS", Text = "LOREM IMPUSM LOREM UMPS", Published = DateTime.Now },
+            new News() { Id = 3, Title = "LOREM IMPUSM LOREM UMPS", Text = "LOREM IMPUSM LOREM UMPS", Published = DateTime.Now },
+            new News() { Id = 4, Title = "LOREM IMPUSM LOREM UMPS", Text = "LOREM IMPUSM LOREM UMPS", Published = DateTime.Now },
+            new News() { Id = 5, Title = "LOREM IMPUSM LOREM UMPS", Text = "LOREM IMPUSM LOREM UMPS", Published = DateTime.Now },
+            new News() { Id = 6, Title = "LOREM IMPUSM LOREM UMPS", Text = "LOREM IMPUSM LOREM UMPS", Published = DateTime.Now },
+            new News() { Id = 7, Title = "LOREM IMPUSM LOREM UMPS", Text = "LOREM IMPUSM LOREM UMPS", Published = DateTime.Now },
+            new News() { Id = 8, Title = "LOREM IMPUSM LOREM UMPS", Text = "LOREM IMPUSM LOREM UMPS", Published = DateTime.Now }
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+                );
+
         }
     }
 }

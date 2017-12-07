@@ -7,13 +7,13 @@ namespace Bodega.dev.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Intial : IMigrationMetadata
+    public sealed partial class Jobs : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Intial));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Jobs));
         
         string IMigrationMetadata.Id
         {
-            get { return "201712052117592_Intial"; }
+            get { return "201712021657585_Jobs"; }
         }
         
         string IMigrationMetadata.Source
