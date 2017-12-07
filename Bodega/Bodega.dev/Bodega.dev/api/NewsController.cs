@@ -9,26 +9,8 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using Bodega.dev.Models;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 using System.Web;
 using System.IO;
->>>>>>> parent of 27c373d... ww
-=======
->>>>>>> parent of 3da7a65... work
-=======
->>>>>>> parent of ddb9a3e... GG
-=======
->>>>>>> parent of ddb9a3e... GG
-=======
->>>>>>> parent of ddb9a3e... GG
-=======
->>>>>>> parent of ddb9a3e... GG
 
 namespace Bodega.dev.api
 {
@@ -39,36 +21,38 @@ namespace Bodega.dev.api
         // GET: api/News
         public IHttpActionResult Getnews()
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            var news = db.news
-=======
             
             var news = db.news
                 .OrderByDescending(x => x.Published).Include(x=> x.Image)
->>>>>>> parent of 27c373d... ww
-=======
-
-            var news = db.news
->>>>>>> parent of ddb9a3e... GG
-=======
-
-            var news = db.news
->>>>>>> parent of ddb9a3e... GG
-=======
-
-            var news = db.news
->>>>>>> parent of ddb9a3e... GG
-=======
-
-            var news = db.news
->>>>>>> parent of ddb9a3e... GG
                 .ToList();
             return Ok(news);
+        }
+
+        [HttpPost]
+        [Route("api/fileUpload")]
+        public IHttpActionResult PostFileUpload()
+        {
+            if (HttpContext.Current.Request.Files.AllKeys.Any())
+            {
+                // Get the uploaded image from the Files collection  
+                var httpPostedFile = HttpContext.Current.Request.Files["UploadedImage"];
+                if (httpPostedFile != null)
+                {
+                    FileUpload imgupload = new FileUpload();
+                    int length = httpPostedFile.ContentLength;
+                    imgupload.imagedata = new byte[length]; //get imagedata  
+                    httpPostedFile.InputStream.Read(imgupload.imagedata, 0, length);
+                    imgupload.imagename = Path.GetFileName(httpPostedFile.FileName);
+                    db.FileUploads.Add(imgupload);
+                    db.SaveChanges();
+                    var fileSavePath = Path.Combine(HttpContext.Current.Server.MapPath("~/Content/imgr"), httpPostedFile.FileName);
+                    // Save the uploaded file to "UploadedFiles" folder  
+                    httpPostedFile.SaveAs(fileSavePath);
+                    return Ok("Image Uploaded");
+                    
+                }
+            }
+            return Ok("Image is not Uploaded");
         }
 
         // GET: api/News/5
@@ -127,38 +111,14 @@ namespace Bodega.dev.api
             {
                 return BadRequest(ModelState);
             }
-
+            var img = db.news.FirstOrDefault(x => x.ImageId == x.ImageId);
             news.Published = DateTime.Now;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             news.Image.Id = img.Id;
             
->>>>>>> parent of 27c373d... ww
-=======
-
->>>>>>> parent of 3da7a65... work
-=======
-
->>>>>>> parent of ddb9a3e... GG
-=======
-
->>>>>>> parent of ddb9a3e... GG
-=======
-
->>>>>>> parent of ddb9a3e... GG
-=======
-
->>>>>>> parent of ddb9a3e... GG
             db.news.Add(news);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = news.Id }, news);
+            return Ok();
         }
 
         // DELETE: api/News/5

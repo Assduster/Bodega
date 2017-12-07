@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -11,12 +13,6 @@ namespace Bodega.dev.Models
         public string Title { get; set; }
         public string Text { get; set; }
         public DateTime Published { get; set; }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         public FileUpload Image { get; set; }
         public int ImageId { get; set; }
 
@@ -31,14 +27,5 @@ namespace Bodega.dev.Models
         public string imagename {get;set;}
         public byte[] imagedata{get; set;
         } 
->>>>>>> parent of 27c373d... ww
-=======
->>>>>>> parent of ddb9a3e... GG
-=======
->>>>>>> parent of ddb9a3e... GG
-=======
->>>>>>> parent of ddb9a3e... GG
-=======
->>>>>>> parent of ddb9a3e... GG
     }
 }
