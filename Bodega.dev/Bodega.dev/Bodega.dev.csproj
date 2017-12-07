@@ -208,6 +208,9 @@
     </Compile>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of ddb9a3e... GG
 =======
 >>>>>>> parent of ddb9a3e... GG
     <Compile Include="Migrations\201712011156037_Initial.cs" />
@@ -226,11 +229,14 @@
     <Compile Include="Migrations\201712021657585_Jobs.Designer.cs">
       <DependentUpon>201712021657585_Jobs.cs</DependentUpon>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <Compile Include="Migrations\201712052117592_Intial.cs" />
     <Compile Include="Migrations\201712052117592_Intial.Designer.cs">
       <DependentUpon>201712052117592_Intial.cs</DependentUpon>
 >>>>>>> parent of 27c373d... ww
+=======
+>>>>>>> parent of ddb9a3e... GG
 =======
 >>>>>>> parent of ddb9a3e... GG
     </Compile>
@@ -352,6 +358,9 @@
   <ItemGroup>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of ddb9a3e... GG
 =======
 >>>>>>> parent of ddb9a3e... GG
     <EmbeddedResource Include="Migrations\201712011156037_Initial.resx">
@@ -366,10 +375,13 @@
     <EmbeddedResource Include="Migrations\201712021657585_Jobs.resx">
       <DependentUpon>201712021657585_Jobs.cs</DependentUpon>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <EmbeddedResource Include="Migrations\201712052117592_Intial.resx">
       <DependentUpon>201712052117592_Intial.cs</DependentUpon>
 >>>>>>> parent of 27c373d... ww
+=======
+>>>>>>> parent of ddb9a3e... GG
 =======
 >>>>>>> parent of ddb9a3e... GG
     </EmbeddedResource>
