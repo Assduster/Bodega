@@ -10,10 +10,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
        
 =======
 
 >>>>>>> parent of 27c373d... ww
+=======
+       
+>>>>>>> parent of ddb9a3e... GG
 =======
        
 >>>>>>> parent of ddb9a3e... GG
@@ -69,8 +73,11 @@
 
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     
+=======
+>>>>>>> parent of ddb9a3e... GG
 =======
 >>>>>>> parent of ddb9a3e... GG
 
@@ -83,9 +90,12 @@
         $("#addnewspage").hide();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     }
+=======
+>>>>>>> parent of ddb9a3e... GG
 =======
 >>>>>>> parent of ddb9a3e... GG
 
