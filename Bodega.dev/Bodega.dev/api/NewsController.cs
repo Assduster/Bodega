@@ -9,6 +9,11 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using Bodega.dev.Models;
+<<<<<<< HEAD
+=======
+using System.Web;
+using System.IO;
+>>>>>>> parent of 27c373d... ww
 
 namespace Bodega.dev.api
 {
@@ -19,8 +24,14 @@ namespace Bodega.dev.api
         // GET: api/News
         public IHttpActionResult Getnews()
         {
+<<<<<<< HEAD
 
             var news = db.news
+=======
+            
+            var news = db.news
+                .OrderByDescending(x => x.Published).Include(x=> x.Image)
+>>>>>>> parent of 27c373d... ww
                 .ToList();
             return Ok(news);
         }
@@ -81,9 +92,14 @@ namespace Bodega.dev.api
             {
                 return BadRequest(ModelState);
             }
-
+            var img = db.news.FirstOrDefault(x => x.ImageId == x.ImageId);
             news.Published = DateTime.Now;
+<<<<<<< HEAD
 
+=======
+            news.Image.Id = img.Id;
+            
+>>>>>>> parent of 27c373d... ww
             db.news.Add(news);
             db.SaveChanges();
 

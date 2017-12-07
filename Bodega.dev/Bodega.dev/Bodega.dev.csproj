@@ -206,6 +206,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Migrations\201712011156037_Initial.cs" />
     <Compile Include="Migrations\201712011156037_Initial.Designer.cs">
       <DependentUpon>201712011156037_Initial.cs</DependentUpon>
@@ -221,6 +222,11 @@
     <Compile Include="Migrations\201712021657585_Jobs.cs" />
     <Compile Include="Migrations\201712021657585_Jobs.Designer.cs">
       <DependentUpon>201712021657585_Jobs.cs</DependentUpon>
+=======
+    <Compile Include="Migrations\201712052117592_Intial.cs" />
+    <Compile Include="Migrations\201712052117592_Intial.Designer.cs">
+      <DependentUpon>201712052117592_Intial.cs</DependentUpon>
+>>>>>>> parent of 27c373d... ww
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -338,6 +344,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\201712011156037_Initial.resx">
       <DependentUpon>201712011156037_Initial.cs</DependentUpon>
     </EmbeddedResource>
@@ -349,6 +356,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712021657585_Jobs.resx">
       <DependentUpon>201712021657585_Jobs.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Migrations\201712052117592_Intial.resx">
+      <DependentUpon>201712052117592_Intial.cs</DependentUpon>
+>>>>>>> parent of 27c373d... ww
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
