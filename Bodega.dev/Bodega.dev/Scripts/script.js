@@ -11,10 +11,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
        
 =======
 
 >>>>>>> parent of 27c373d... ww
+=======
+       
+>>>>>>> parent of ddb9a3e... GG
 =======
        
 >>>>>>> parent of ddb9a3e... GG
@@ -74,8 +78,11 @@
     
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     
+=======
+>>>>>>> parent of ddb9a3e... GG
 =======
 >>>>>>> parent of ddb9a3e... GG
 =======
@@ -88,6 +95,7 @@
         $("#HomePage").hide();
         $("#MenyPage").hide();
         $("#addnewspage").hide();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -108,6 +116,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> parent of 27c373d... ww
+=======
+    }
+=======
+>>>>>>> parent of ddb9a3e... GG
+
+<<<<<<< HEAD
+ 
+>>>>>>> parent of ddb9a3e... GG
 =======
     }
 
@@ -137,6 +153,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 var html = "<div class='well'><div class='media'><a class='pull-left' href='#'><img class='media-object' src='/Content/imgr/101.jpg' style='width:250px; height:200px;'></a><div class='media-body'><h3 class='media-heading' style='font-family:Fjord One, serif; font-weight:bold;'>"
 =======
 
@@ -151,10 +168,14 @@
 =======
                 var html = "<div class='well'><div class='media'><a class='pull-left' href='#'><img class='media-object' src='/Content/imgr/101.jpg' style='width:250px; height:200px;'></a><div class='media-body'><h3 class='media-heading' style='font-family:Fjord One, serif; font-weight:bold;'>"
 >>>>>>> parent of ddb9a3e... GG
+=======
+                var html = "<div class='well'><div class='media'><a class='pull-left' href='#'><img class='media-object' src='/Content/imgr/101.jpg' style='width:250px; height:200px;'></a><div class='media-body'><h3 class='media-heading' style='font-family:Fjord One, serif; font-weight:bold;'>"
+>>>>>>> parent of ddb9a3e... GG
                     + data[i].Title + "</h3><p class='text- right' style='font-family:Fjord One, serif; font-size:17px; font-weight:500;'>"
                     + data[i].Text + "</p><ul class='list-inline list-unstyled'><li><span><i class='glyphicon glyphicon-calendar' ></i>"
                     + data[i].Published + "</span></li></ul></div></div></div>";
                 $("#HomePage").append(html);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -227,12 +248,20 @@
     }
 
 >>>>>>> parent of ddb9a3e... GG
+=======
+
+            }
+        });
+    }
+
+>>>>>>> parent of ddb9a3e... GG
     //Postar iväg en ny nyhet och sparar den i databasen.
     var data = {
         id: null,
         title: null,
         text: null
     };
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> parent of ddb9a3e... GG
 
@@ -298,12 +327,30 @@
   
 
 >>>>>>> parent of ddb9a3e... GG
+=======
+
+    data.title = $("").val();
+    data.text = $("").val();
+
+    function addnews(data) {
+        $.post("api/news", data).then(function (data) {
+            console.log("Data skapad");
+        });
+    }
+
+
+  
+
+>>>>>>> parent of ddb9a3e... GG
    
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of ddb9a3e... GG
+=======
 >>>>>>> parent of ddb9a3e... GG
 =======
 >>>>>>> parent of ddb9a3e... GG
@@ -328,6 +375,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     //var url = "api/fileUpload";
     //$.getJSON(url, function (data) {
@@ -342,6 +390,8 @@
     //    });
     //});
 >>>>>>> parent of 27c373d... ww
+=======
+>>>>>>> parent of ddb9a3e... GG
 =======
 >>>>>>> parent of ddb9a3e... GG
 =======

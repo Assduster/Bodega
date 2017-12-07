@@ -210,6 +210,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of ddb9a3e... GG
 =======
 >>>>>>> parent of ddb9a3e... GG
 =======
@@ -234,11 +237,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <Compile Include="Migrations\201712052117592_Intial.cs" />
     <Compile Include="Migrations\201712052117592_Intial.Designer.cs">
       <DependentUpon>201712052117592_Intial.cs</DependentUpon>
 >>>>>>> parent of 27c373d... ww
+=======
+>>>>>>> parent of ddb9a3e... GG
 =======
 >>>>>>> parent of ddb9a3e... GG
 =======
@@ -366,6 +372,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of ddb9a3e... GG
 =======
 >>>>>>> parent of ddb9a3e... GG
 =======
@@ -386,10 +395,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <EmbeddedResource Include="Migrations\201712052117592_Intial.resx">
       <DependentUpon>201712052117592_Intial.cs</DependentUpon>
 >>>>>>> parent of 27c373d... ww
+=======
+>>>>>>> parent of ddb9a3e... GG
 =======
 >>>>>>> parent of ddb9a3e... GG
 =======

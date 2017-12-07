@@ -14,12 +14,15 @@ using Bodega.dev.Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 using System.Web;
 using System.IO;
 >>>>>>> parent of 27c373d... ww
 =======
 >>>>>>> parent of 3da7a65... work
+=======
+>>>>>>> parent of ddb9a3e... GG
 =======
 >>>>>>> parent of ddb9a3e... GG
 =======
@@ -40,6 +43,7 @@ namespace Bodega.dev.api
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             var news = db.news
 =======
@@ -47,6 +51,10 @@ namespace Bodega.dev.api
             var news = db.news
                 .OrderByDescending(x => x.Published).Include(x=> x.Image)
 >>>>>>> parent of 27c373d... ww
+=======
+
+            var news = db.news
+>>>>>>> parent of ddb9a3e... GG
 =======
 
             var news = db.news
@@ -126,6 +134,7 @@ namespace Bodega.dev.api
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             news.Image.Id = img.Id;
@@ -134,6 +143,9 @@ namespace Bodega.dev.api
 =======
 
 >>>>>>> parent of 3da7a65... work
+=======
+
+>>>>>>> parent of ddb9a3e... GG
 =======
 
 >>>>>>> parent of ddb9a3e... GG
