@@ -9,7 +9,6 @@
 
 </div>
 <!--End Home Page-->
-
 <!--Gallery Page-->
 <div class="container" id="GalleryPage">
     <hr />
@@ -79,14 +78,12 @@
 
 </div>
 <!--End Gallery Page-->
-
 <!--Meny-->
 <div class="container" id="MenyPage">
     <hr />
     <img src="~/Content/imgr/MenyAllt.jpg" />
 </div>
 <!--End Menybar-->
-
 <!--Add News Page-->
 <div class="container" id="addnewspage">
     <hr />
@@ -99,15 +96,30 @@
             <label for="exampleFormControlTextarea1">Text</label>
             <textarea class="form-control" id="postText" rows="5"></textarea>
         </div>
-        <button class="btn btn-success" id="ad-news">Skapa nyhet</button>
-        <input type="reset" class="btn btn-danger" value="Ångra" />
+        <div class="form-group" id="example">
+            <div class="demo-section k-header">
+                <h3>Image Upload</h3>
+                <br 
+                <div>
+                    <label for="fileUpload">
+                        Select File to Upload:
+
+                        <input id="fileUpload" type="file" name="files"  />
+                        <br />
+                        <br />
+                        <input id="btnUploadFile" type="button" value="Upload File" class="btn-primary" />
+                    </label>
+                </div>
+            </div>
+        </div>
     </form>
-   
-
-
 </div>
-<!--End Add News Page-->
+<button class="btn btn-success" id="weyy">Skapa nyhet</button>
+<input type="reset" class="btn btn-danger" value="Ångra" />
+  
+    
 
+<!--End Add News Page-->
 <!--Contact Page-->
 <div class="container">
     <hr />

@@ -10,11 +10,22 @@ namespace Bodega.dev.Models
     public class News
     {
         public int Id { get; set; }
-        [Display(Name = "Titel")]
         public string Title { get; set; }
-        [Display(Name = "Nyhets Text")]
         public string Text { get; set; }
         public DateTime Published { get; set; }
+        public FileUpload Image { get; set; }
+        public int ImageId { get; set; }
+
+
     }
-   
+    public class FileUpload
+    {
+       
+       
+        [Key]
+        public int Id{get;set;}
+        public string imagename {get;set;}
+        public byte[] imagedata{get; set;
+        } 
+    }
 }
