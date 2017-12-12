@@ -1,6 +1,10 @@
-﻿using System;
+﻿using Bodega.dev.Models;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
 
@@ -12,6 +16,8 @@ namespace Bodega.dev.Controllers
         {
             return View();
         }
+
+  
 
         public ActionResult About()
         {

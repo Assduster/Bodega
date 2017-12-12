@@ -192,7 +192,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="api\FileUploadsController.cs" />
     <Compile Include="api\NewsController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -206,13 +205,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201712072130583_dolle.cs" />
-    <Compile Include="Migrations\201712072130583_dolle.Designer.cs">
-      <DependentUpon>201712072130583_dolle.cs</DependentUpon>
+    <Compile Include="Migrations\201712112144006_initial.cs" />
+    <Compile Include="Migrations\201712112144006_initial.Designer.cs">
+      <DependentUpon>201712112144006_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\EmailModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\News.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -329,8 +329,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712072130583_dolle.resx">
-      <DependentUpon>201712072130583_dolle.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712112144006_initial.resx">
+      <DependentUpon>201712112144006_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

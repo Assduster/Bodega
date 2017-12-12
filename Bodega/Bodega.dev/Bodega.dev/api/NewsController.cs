@@ -21,10 +21,10 @@ namespace Bodega.dev.api
         // GET: api/News
         public IHttpActionResult Getnews()
         {
-            
             var news = db.news
-                .OrderByDescending(x => x.Published).Include(x=> x.Image)
+                .OrderByDescending(x => x.Published).Include(x => x.Image).Take(10)
                 .ToList();
+
             return Ok(news);
         }
 
@@ -34,8 +34,8 @@ namespace Bodega.dev.api
         {
             if (HttpContext.Current.Request.Files.AllKeys.Any())
             {
-                // Get the uploaded image from the Files collection  
-                var httpPostedFile = HttpContext.Current.Request.Files["UploadedImage"];
+            // Get the uploaded image from the Files collection  
+              var httpPostedFile = HttpContext.Current.Request.Files["UploadedImage"];
                 if (httpPostedFile != null)
                 {
                     FileUpload imgupload = new FileUpload();
@@ -49,7 +49,7 @@ namespace Bodega.dev.api
                     // Save the uploaded file to "UploadedFiles" folder  
                     httpPostedFile.SaveAs(fileSavePath);
                     return Ok("Image Uploaded");
-                    
+
                 }
             }
             return Ok("Image is not Uploaded");
@@ -106,16 +106,19 @@ namespace Bodega.dev.api
         // POST: api/News
         [ResponseType(typeof(News))]
         public IHttpActionResult PostNews(News news)
-        {
+
+         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            var img = db.news.FirstOrDefault(x => x.ImageId == x.ImageId);
+
+            //var img = db.news.Include(x => x.Image).sel(x => x.Image.Id == x.ImageId);
+            //news.Image.Id = img.Id;
+
             news.Published = DateTime.Now;
-            news.Image.Id = img.Id;
-            
             db.news.Add(news);
+            //db.Entry(news.Image).State = EntityState.Unchanged;
             db.SaveChanges();
 
             return Ok();
