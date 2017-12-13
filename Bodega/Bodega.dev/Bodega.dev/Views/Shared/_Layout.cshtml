@@ -17,7 +17,7 @@
     @if (User.Identity.Name == "Admin")
     {
         <div class="navbar navbar-inverse">
-            
+
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -58,7 +58,7 @@
                         <li><a class="navigation" href="#Meny">Meny</a></li>
                         <li><a class="navigation" href="#Gallery">Galleri</a></li>
                         <li><a data-toggle="modal" data-target="#contact" data-original-title>Kontakta oss</a></li>
-                        
+
                     </ul>
                 </div>
             </div>
@@ -74,8 +74,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    <script src="~/Scripts/script.js"></script>
-
+    <script src="~/Scripts/Home.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

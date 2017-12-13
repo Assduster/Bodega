@@ -205,9 +205,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201712112144006_initial.cs" />
-    <Compile Include="Migrations\201712112144006_initial.Designer.cs">
-      <DependentUpon>201712112144006_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201712131420057_Initial.cs" />
+    <Compile Include="Migrations\201712131420057_Initial.Designer.cs">
+      <DependentUpon>201712131420057_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -278,7 +278,7 @@
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\script.js" />
+    <Content Include="Scripts\Home.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -329,8 +329,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712112144006_initial.resx">
-      <DependentUpon>201712112144006_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712131420057_Initial.resx">
+      <DependentUpon>201712131420057_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
