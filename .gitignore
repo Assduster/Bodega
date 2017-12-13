@@ -313,3 +313,6 @@ OpenCover/
 
 # Azure Stream Analytics local run output 
 ASALocalRun/
+*.resx
+Bodega/Bodega.dev/Bodega.dev/Migrations/201712131420057_Initial.cs
+Bodega/Bodega.dev/Bodega.dev/Migrations/201712131420057_Initial.Designer.cs
