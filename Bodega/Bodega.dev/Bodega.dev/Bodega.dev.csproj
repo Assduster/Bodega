@@ -205,14 +205,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201712112144006_initial.cs" />
-    <Compile Include="Migrations\201712112144006_initial.Designer.cs">
-      <DependentUpon>201712112144006_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201712142028578_Initial.cs" />
+    <Compile Include="Migrations\201712142028578_Initial.Designer.cs">
+      <DependentUpon>201712142028578_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\EmailModel.cs" />
+    <Compile Include="Models\ImageUpload.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\News.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -254,6 +254,8 @@
     <Content Include="Content\imgr\134.jpg" />
     <Content Include="Content\imgr\135.jpg" />
     <Content Include="Content\imgr\136.jpg" />
+    <Content Include="Content\imgr\backgroundtext.png" />
+    <Content Include="Content\imgr\perfect.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -329,8 +331,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712112144006_initial.resx">
-      <DependentUpon>201712112144006_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712142028578_Initial.resx">
+      <DependentUpon>201712142028578_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

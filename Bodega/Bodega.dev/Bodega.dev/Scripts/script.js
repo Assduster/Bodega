@@ -12,6 +12,9 @@
 
     }
 
+
+
+
     var panels = $('.vote-results');
     var panelsButton = $('.dropdown-results');
     panels.hide();
@@ -88,33 +91,35 @@
             console.log(data);
             //Tömer listan först så det inte dupplicerar.
             $("#HomePage").empty();
-            
+
+
+
             //Går igenom all data som finns och skriver ut allt i HTML.
             for (var i = 0; i < data.length; i++) {
-                var html = "<div class='well'><div class='media'><a class='pull-left' href=''><img class='media-object' src='/Content/imgr/101.jpg' style='width:250px; height:200px;' ></a><div class='media-body'><h3 class='media-heading' style='font-family:Fjord One, serif; font-weight:bold;'>"
+                //console.log(data[i].ImageUploads["0"].ImageUrl);
+                var html = "<div class='well'><div class='media'><a class='pull-left' href=''><img class='media-object' src='/Content/imgr/" + data[i].ImageUploads.ImageUrl + "' style='width:250px; height:200px;' ></a><div class='media-body'><h3 class='media-heading' style='font-family:Fjord One, serif; font-weight:bold;'>"
                     + data[i].Title + "</h3><p class='text- right' style='font-family:Fjord One, serif; font-size:17px; font-weight:500;'>"
                     + data[i].Text + "</p><ul class='list-inline list-unstyled'><li><span><i class='glyphicon glyphicon-calendar' ></i>"
-                    + data[i].Published + "</span></li></ul></div></div></div>";
+                    + data[i].Published + "</span></li></ul><hr/></div></div></div>";
                 $("#HomePage").append(html);
-                
             }
         });
+        //<section>
+        //    <i class="glyphicon glyphicon-folder-open"></i>Bootstrap
+		      //              <i class="glyphicon glyphicon-user"></i>RaymondDragon
+		      //              <i class="glyphicon glyphicon-calendar"></i>1395/12/21
+		      //              <i class="glyphicon glyphicon-eye-open"></i>10000
+		      //              <a href="#" class="btn btn-default btn-sm pull-right">More ... </a>
+        //</section>
     }
-
-    var imgs = ["101.jpg", "102.jpg", "103.jpg", "104.jpg", "105.jpg", "106.jpg", "107.jpg", "108.jpg", "109.jpg", "110.jpg", "111.jpg", "112.jpg",];
-    for (var i = 0; i < imgs.length; i++) {
-        console.log(imgs[i]);
-    }
-
-    //Skapa nyhet
-    $("#addnews").on('click', function () {
+    $("#uploadImage").on('click', function () {
+        debugger
         var data = new FormData()
         var files = $("#fileUpload").get(0).files;
-        // Add the uploaded image content to the form data collection  
         if (files.length > 0) {
             data.append("UploadedImage", files[0]);
         }
-        // Make Ajax request with the contentType = false, and procesDate = false  
+
         var ajaxRequest = $.ajax({
             type: "POST",
             url: "/api/fileUpload",
@@ -123,17 +128,17 @@
             data: data
         });
         ajaxRequest.done(function (xhr, textStatus) {
-            console.log(xhr, textStatus);
             var apiUrl = "/api/News";
             var data = {
                 id: 0,
                 title: null,
-                text: null
+                text: null,
+
             };
-            debugger
+
             data.title = $("#postTitle").val();
             data.text = $("#postText").val();
-            data.Image = $("arsle.jpg");
+
 
             $.ajax({
                 url: apiUrl,
@@ -141,19 +146,28 @@
                 data: JSON.stringify(data),
                 contentType: "application/json"
             }).done(function () {
-
-            }).fail(function () {
-                alert("Något gick fel");
+                window.location.href = "#/home";
+            
             });
+            homePageNews();
+
+            $("#HomePage").show();
+            $("#addnewspage").hide();
+            $("#TitleOverAll").text('Nyheter');
+            location.reload();
 
         });
-       
-     
-
-
-
     });
-  
+
+
+
+
+
+
+
+
+
+
 
     //Kontakt forumuläret
     panelsButton.click(function () {

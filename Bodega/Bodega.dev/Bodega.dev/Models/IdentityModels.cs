@@ -20,8 +20,8 @@ namespace Bodega.dev.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<News>news { get; set; }
-        public DbSet<FileUpload>FileUploads { get; set; }
+        public DbSet<News>News { get; set; }
+        public DbSet<ImageUpload>ImageUploads { get; set; }
         //public DbSet<FileUpload>FileUploads { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

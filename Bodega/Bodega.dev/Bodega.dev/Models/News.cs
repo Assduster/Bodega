@@ -13,18 +13,16 @@ namespace Bodega.dev.Models
         public string Title { get; set; }
         public string Text { get; set; }
         public DateTime Published { get; set; }
-        public FileUpload Image { get; set; }
-        public int ImageId { get; set; }
+        public ImageUpload ImageUploads { get; set; }
 
+        [NotMapped]
+        public int ImageUploadId { get; set; }
 
+        public News()
+        {
+
+        }
+      
     }
  
-    public class FileUpload
-    {
-        [Key]
-        public int Id{get;set;}
-        public string imagename {get;set;}
-        public byte[] imagedata{get; set;
-        } 
-    }
 }

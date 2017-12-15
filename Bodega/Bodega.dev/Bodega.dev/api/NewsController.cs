@@ -21,34 +21,33 @@ namespace Bodega.dev.api
         // GET: api/News
         public IHttpActionResult Getnews()
         {
-            var news = db.news
-                .OrderByDescending(x => x.Published).Include(x => x.Image).Take(10)
+            var imageses = db.News
+                .OrderByDescending(x => x.Published)
+                .Include(x => x.ImageUploads).Take(10)
                 .ToList();
-
-            return Ok(news);
+            return Ok(imageses);
         }
 
         [HttpPost]
         [Route("api/fileUpload")]
         public IHttpActionResult PostFileUpload()
         {
+           
             if (HttpContext.Current.Request.Files.AllKeys.Any())
             {
-            // Get the uploaded image from the Files collection  
-              var httpPostedFile = HttpContext.Current.Request.Files["UploadedImage"];
+                // Get the uploaded image from the Files collection  
+                var httpPostedFile = HttpContext.Current.Request.Files["UploadedImage"];
                 if (httpPostedFile != null)
                 {
-                    FileUpload imgupload = new FileUpload();
+                    ImageUpload imgupload = new ImageUpload();
                     int length = httpPostedFile.ContentLength;
-                    imgupload.imagedata = new byte[length]; //get imagedata  
-                    httpPostedFile.InputStream.Read(imgupload.imagedata, 0, length);
-                    imgupload.imagename = Path.GetFileName(httpPostedFile.FileName);
-                    db.FileUploads.Add(imgupload);
+                    imgupload.ImageUrl = Path.GetFileName(httpPostedFile.FileName);
+                    db.ImageUploads.Add(imgupload);
                     db.SaveChanges();
                     var fileSavePath = Path.Combine(HttpContext.Current.Server.MapPath("~/Content/imgr"), httpPostedFile.FileName);
                     // Save the uploaded file to "UploadedFiles" folder  
                     httpPostedFile.SaveAs(fileSavePath);
-                    return Ok("Image Uploaded");
+                    //return CreatedAtRoute("DefaultApi", new { id = imageUpload.Id }, imageUpload);
 
                 }
             }
@@ -59,7 +58,7 @@ namespace Bodega.dev.api
         [ResponseType(typeof(News))]
         public IHttpActionResult GetNews(int id)
         {
-            News news = db.news.Find(id);
+            News news = db.News.Find(id);
             if (news == null)
             {
                 return NotFound();
@@ -107,18 +106,22 @@ namespace Bodega.dev.api
         [ResponseType(typeof(News))]
         public IHttpActionResult PostNews(News news)
 
-         {
+        {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            //var img = db.news.Include(x => x.Image).sel(x => x.Image.Id == x.ImageId);
-            //news.Image.Id = img.Id;
+            var img = db.ImageUploads.OrderByDescending(x => x.Id).First();
+            news.ImageUploads = img;
+            if(news.ImageUploads == null)
+            {
+                return BadRequest();
+            }
 
             news.Published = DateTime.Now;
-            db.news.Add(news);
-            //db.Entry(news.Image).State = EntityState.Unchanged;
+            db.News.Add(news);
+            db.Entry(news.ImageUploads).State = EntityState.Unchanged;
             db.SaveChanges();
 
             return Ok();
@@ -128,13 +131,13 @@ namespace Bodega.dev.api
         [ResponseType(typeof(News))]
         public IHttpActionResult DeleteNews(int id)
         {
-            News news = db.news.Find(id);
+            News news = db.News.Find(id);
             if (news == null)
             {
                 return NotFound();
             }
 
-            db.news.Remove(news);
+            db.News.Remove(news);
             db.SaveChanges();
 
             return Ok(news);
@@ -151,7 +154,7 @@ namespace Bodega.dev.api
 
         private bool NewsExists(int id)
         {
-            return db.news.Count(e => e.Id == id) > 0;
+            return db.News.Count(e => e.Id == id) > 0;
         }
     }
 }
