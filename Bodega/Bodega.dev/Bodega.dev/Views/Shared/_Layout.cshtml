@@ -13,10 +13,36 @@
 </head>
 <body>
 
-    
- 
-        <div class="navbar navbar-fixed-top">
+    <div class="jumbotron"></div>
+    @if (User.Identity.Name == "Admin")
+    {
+        <div class="navbar navbar-inverse">
             
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Bodega", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a class="navigation" href="#Home">Home</a></li>
+                        <li><a class="navigation" href="#Meny">Meny</a></li>
+                        <li><a class="navigation" href="#Gallery">Gallery</a></li>
+                        <li><a class="navigation" href="#Contact">Admin</a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="navbar navbar-inverse">
             <div class="container">
                 @*<div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -33,20 +59,12 @@
                         <li><a class="navigation" href="#Meny">Meny</a></li>
                         <li><a class="navigation" href="#Gallery">Galleri</a></li>
                         <li><a data-toggle="modal" data-target="#contact" data-original-title>Kontakta oss</a></li>
+                        
                     </ul>
                 </div>
-
             </div>
         </div>
- 
-   
-  
-           
-    <div class="jumbotron jumbotron-billboard">
-        <div class="img">
-            <img width="300" height="300" style="display:block;margin:0 auto;margin-top:-25px;" src="~/Content/imgr/backgroundtext.png">
-        </div>
-    </div>
+    }
     <div class="container body-content">
         @RenderBody()
         @*<hr />
@@ -57,8 +75,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    <script src="~/Scripts/script.js"></script>
-
+    <script src="~/Scripts/Home.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
